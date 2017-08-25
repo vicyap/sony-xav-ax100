@@ -1,0 +1,14 @@
+#
+# IOP_CAR subsystem configuration
+#
+
+menuconfig IOP_CAR 
+	tristate "Sunplus IOP_CAR support"
+
+if IOP_CAR 
+
+config SUNPLUS_IOP_CAR
+	tristate "Sunplus IOP_CAR core"
+	default y
+
+endif

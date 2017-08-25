@@ -1,0 +1,6 @@
+1.Download arm-2010q1-202-arm-none-linux-gnueabi binary package
+  http://www.mentor.com/embedded-software/sourcery-tools/sourcery-codebench/evaluations/
+2.Unzip package
+3.Install gawk(sudo apt-get install gawk)
+4.Run build.sh ,it will auto make glibc.
+5.The output file will locate in buildglibc/install/arm-none-linux-gnueabi/libc/lib/ & buildglibc/install/arm-none-linux-gnueabi/libc/usr/lib/.

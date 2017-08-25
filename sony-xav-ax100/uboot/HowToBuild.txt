@@ -1,0 +1,2 @@
+1. Run build.sh ,it will auto make uBoot.
+2. The u-boot.img is output in uBoot folder.

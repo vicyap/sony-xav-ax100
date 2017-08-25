@@ -1,0 +1,4 @@
+config USB_BC
+	bool "Enable Support sphe8388 BC"
+	depends on USB
+	default n

@@ -1,0 +1,181 @@
+input-raw.lo: input-raw.c ../config.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/errno.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/errno.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/errno.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/errno.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno-base.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/stdio.h \
+ /opt/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stddef.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/libio.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/_G_config.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/wchar.h \
+ /opt/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stdarg.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio_lim.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sys_errlist.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/endian.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/endian.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/sysmacros.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/pthreadtypes.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/alloca.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/unistd.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix_opt.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/confname.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/getopt.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/time.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/input.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ioctl.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctls.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctls.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctl.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctl.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctl-types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ttydefaults.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/int-ll64.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/bitsperlong.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/bitsperlong.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/posix_types.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/stddef.h \
+ /opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/posix_types.h \
+ ../src/tslib-private.h ../src/tslib.h ../src/tslib-filter.h \
+ ../src/tslib.h
+
+../config.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/errno.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/errno.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/errno.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/errno.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/errno-base.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/stdio.h:
+
+/opt/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stddef.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/libio.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/_G_config.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/wchar.h:
+
+/opt/arm-2010q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.4.1/include/stdarg.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio_lim.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sys_errlist.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/stdio.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/stdlib.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/endian.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/endian.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/byteswap.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/sysmacros.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/pthreadtypes.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/alloca.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/unistd.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/posix_opt.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/confname.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/getopt.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/time.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/input.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ioctl.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctls.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctls.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/ioctl.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/ioctl.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/ioctl-types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/ttydefaults.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/int-ll64.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/bitsperlong.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/bitsperlong.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/posix_types.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/stddef.h:
+
+/opt/arm-2010q1/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/posix_types.h:
+
+../src/tslib-private.h:
+
+../src/tslib.h:
+
+../src/tslib-filter.h:
+
+../src/tslib.h:

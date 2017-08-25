@@ -1,0 +1,3 @@
+config IACP
+	tristate "iacp_i2c"
+	default n

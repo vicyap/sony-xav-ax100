@@ -1,0 +1,176 @@
+if ARCH_GEMINI
+
+menu "GEMINI Options"
+
+config MACH_GEMINI
+    bool "GEMINI (Platform)"
+	select CPU_V7
+	select USB_ARCH_HAS_EHCI if USB_SUPPORT
+	select USB_ARCH_HAS_OHCI if USB_SUPPORT
+	select ARM_CPU_SUSPEND if PM
+
+config MACH_GEMINI_ASIC
+    bool "GEMINI ASIC (Platform)"
+
+config GEMINI_PLATFORM_SDK
+    tristate "Enable for platform_sdk"
+    help
+        GEMINI Platform SDK
+
+config SERIAL_GEMINI
+    bool "GEMINI serial port support"
+    depends on ARM && ARCH_GEMINI
+    select SERIAL_CORE
+    help
+        GEMINI UART
+
+config SERIAL_GEMINI_CONSOLE
+    bool "Console on GEMINI serial port"
+    depends on SERIAL_GEMINI
+    select SERIAL_CORE_CONSOLE
+    help
+        GEMINI console
+
+config MTD_SP_CBDMA
+	tristate "support CBUS DMA controller"
+
+config MTD_SP_NAND
+	tristate "support NAND flash controller via Linux MTD"
+	select MTD
+	select MTD_CHAR
+	select MTD_BLOCK
+	select MTD_BLKDEVS
+	select MTD_NAND
+	select MTD_NAND_IDS
+	select MTD_NAND_ECC
+
+if MTD_SP_NAND
+
+config MTD_SP_NAND_CSNR
+	int "Number of chip select"
+	default 1
+	range 1 4
+
+config MTD_SP_NAND_SRAM_BASE
+	hex "Base address of dedicated SRAM"
+	default 0xA0000000 if MACH_GPL83000
+	default 0x9E800000 if MACH_GEMINI
+	help
+	  Some platform (e.g., GEMINI) has a bus limitation
+	  that SDRAM is not accessible from NAND controller,
+	  so that a dedicated SRAM is required to act as a
+	  temporary buffer for data copy from SRAM into SDRAM
+	  via CPU or DMA.
+
+config MTD_SP_NAND_CBDMA
+	bool "Enable CBUS DMA support"
+	depends on MTD_SP_CBDMA
+	help
+	  Some platform (e.g., GEMINI) has a bus limitation
+	  that SDRAM is not accessible from NAND controller,
+	  so that a dedicated SRAM is required to act as a
+	  temporary buffer for data copy from SRAM into SDRAM
+	  via CPU or DMA.
+
+config MTD_SP_NAND_CBDMA_NAME
+	string "CBUS DMA device name"
+	default "sp_cbdma.0"
+	depends on MTD_SP_NAND_CBDMA
+
+config MTD_SP_NAND_SCRAMBLER
+	bool "Enable scrambler/randomizer"
+	help
+	  NAND scramblers (i.e., randomizers) is mainly used to
+	  avoid large island of identical data, because some NAND
+	  chips are sensible to such patterns.
+
+choice
+	prompt "AC timing options"
+
+config MTD_SP_NAND_ACTR_DEFAULT
+	bool "default"
+
+config MTD_SP_NAND_ACTR_FAILSAFE
+	bool "fail-safe"
+
+config MTD_SP_NAND_ACTR_OPTIMIZED
+	bool "optimized"
+
+endchoice
+
+config MTD_SP_NAND_BKER_COUNTER
+	bool "Support block erased counter"
+	help
+	  This enable the runtime block erased counter which shows
+	  the block erased status since system up. It would be cleared
+	  after system reset.
+	  The corresponding sysfs node is [/sys/devices/platform/sp_nand.0/erased].
+
+config SP_NAND_PING_PONG_BUFFER
+    bool "Support NAND ping-pong buffer"
+    help
+        Speed up the SP NAND reading performance.
+        Note that NAND page size must <= 8KB & OOB <=1KB for current ping-pong buffer implementation.
+
+endif # MTD_SP_NAND
+
+config GEMINI_WATCHDOG
+    tristate "support GEMINI watchdog"
+    help
+        GEMINI watchdog
+
+config GEMINI_USB
+	bool "support GEMINI USB"
+	select SCSI
+	select USB
+	select USB_SUPPORT
+	select USB_ARCH_HAS_EHCI
+	select USB_ARCH_HAS_OHCI
+#	select USB_EHCI_HCD_PLATFORM
+#	select USB_OHCI_HCD_PLATFORM
+#	select USB_EHCI_HCD
+#	select USB_OHCI_HCD
+	select USB_STORAGE
+	help
+		GEMINI USB
+
+config SP_PM
+	tristate "support GEMINI PM"
+	help
+		GEMINI PM
+
+config GEMINI_REAL_CHIP
+    bool "GEMINI real chip"
+
+# Sparse memory is only of use on NUMA systems or systems supporting hot pluggable memory.
+# Our system is UMA and no hot pluggable memory. So don't support CONFIG_SPARSEMEM.
+config GEMINI_MEMORY_MODEL
+    bool "GEMINI memory model"
+	select ARCH_HAS_HOLES_MEMORYMODEL
+	select HAVE_ARCH_PFN_VALID
+	select FLATMEM
+	default y
+
+config DEFCONFIG_GEMINI
+        string "Kernel defconfig file"
+
+config GEMINI_CUSTOMIZE_CONFIG
+        tristate "SP CUSTOMIZE CONFIG"
+        default y
+        help
+          If kernel can setup customize config from command line
+
+config GEMINI_IMAGE_DECODER
+        tristate "SP IMAGE DECODER"
+        default n
+        help
+          If kernel support image decode
+
+config GEMINI_IMAGE_DECODER_SND
+        tristate "SP IMAGE DECODER SND"
+        default n
+        help
+          If kernel support image decode 2
+
+endmenu
+endif

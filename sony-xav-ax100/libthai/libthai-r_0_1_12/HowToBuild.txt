@@ -1,0 +1,2 @@
+1.Run ./build.sh libdatrie_source_path , it will auto make Libthai.,it will auto make Libthai.
+2.The output file will locate in out folder.

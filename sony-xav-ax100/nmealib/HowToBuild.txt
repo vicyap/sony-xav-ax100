@@ -1,0 +1,2 @@
+1. Run build.sh ,it will auto make nmealib
+2. The lib is output in output folder.

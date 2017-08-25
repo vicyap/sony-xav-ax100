@@ -1,0 +1,8 @@
+#ifndef NAND_VERSION_H
+#define NAND_VERSION_H
+
+#define NAND_HAL_VERSION			"NAND_VER_HAL V 0.8.8"
+#define NAND_MGR_VERSION			"NAND_VER_MGR V 0.8.8"
+#define NAND_APP_VERSION			"NAND_VER_APP V 0.8.8"
+
+#endif  // endif NAND_VERSION_H

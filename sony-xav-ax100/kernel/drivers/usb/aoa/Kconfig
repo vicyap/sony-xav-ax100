@@ -1,0 +1,4 @@
+config USB_AOA
+	tristate	"sphe 8388 usb aoa driver"
+	depends on	GEMINI_USB
+	default	n

@@ -1,0 +1,2 @@
+1. Run build.sh ,it will auto make kernel.
+2. The zImage is output in arch/arm/boot/.

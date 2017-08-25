@@ -1,0 +1,15 @@
+
+#
+# IR_CAR subsystem configuration
+#
+
+menuconfig IR_CAR
+	depends on SUNPLUS_IOP_CAR
+	tristate "Sunplus IR_CAR input support"
+if IR_CAR && SUNPLUS_IOP_CAR 
+
+config SUNPLUS_IR_CAR
+        tristate "Sunplus IR_CAR input in linux input subsystem"
+	default y
+
+endif 

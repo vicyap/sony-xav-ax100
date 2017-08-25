@@ -1,0 +1,21 @@
+#
+# Display subsystem configuration
+#
+
+menuconfig DISPLAY
+	tristate "letb123 Display"
+
+if DISPLAY
+
+config letb123_DISPLAY
+        tristate "letb123 DISPLAY"
+        default n
+        help
+          Select if you want to use the Display module on system.
+
+config 7188_HDMI
+        tristate "7188 HDMI TX"
+        default n
+        depends on letb123_DISPLAY
+
+endif

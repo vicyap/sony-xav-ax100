@@ -1,0 +1,2 @@
+1. Run ./build.sh ,it will auto make Libdatrie.
+2. The output file will locate in arm/x86 folder.

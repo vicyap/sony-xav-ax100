@@ -1,0 +1,147 @@
+/**
+ * @file AudioError.h
+ * @authors mm.li xun.lu
+ * @date 2015-11-13
+ * @version
+ * @copyright SunMedia Technology (Chengdu) co. Ltd.
+ * @brief define of error code
+ */
+#ifndef AUDIO_ERROR_H
+#define AUDIO_ERROR_H
+
+
+enum
+{
+	AUDIO_NO_ERROR = 0,            /**< non error happened here*/
+	AUDIO_SOCKET_ERROR = -1000,    /**< socket error*/
+	AUDIO_MEM_ERROR = -2000,       /**< memory error*/
+	AUDIO_PARAM_ERROR = -3000,     /**< input param error*/
+	AUDIO_SERVER_ERROR = -4000,    /**< server param error @todo should be removed?*/
+	AUDIO_SEMAPHORE_ERROR = -5000, /**< semaphore error @todo should be removed?*/
+	AUDIO_RESAMPLER_ERROR = -6000, /**< resampler error @todo should be removed?*/
+	AUDIO_BINDER_ERROR = -7000,    /**< binder error @todo should be removed?*/
+	AUDIO_THREAD_ERROR = -8000,    /**< thread error @todo should be removed?*/
+	AUDIO_DRIVER_ERROR = -9000,    /**< driver error @todo should be removed?*/
+	AUDIO_STATE_ERROR = -10000,    /**< state error*/
+};
+
+enum
+{
+	RESAMPLER_NO_ERROR = AUDIO_RESAMPLER_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	RESAMPLER_MALLOC_FAIL,
+	RESAMPLER_INIT_FAIL,
+	RESAMPLER_DOWMIX_MALLOC_FAIL,
+	RESAMPLER_DOWMIX_INIT_FAIL,
+	RESAMPLER_CONVERT_FAIL,
+};
+
+enum
+{
+	AUDIO_SOCKET_NO_ERROR = AUDIO_SOCKET_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	AUDIO_SOCKET_CONNECT_FAIL,
+	AUDIO_SOCKET_NOT_HEAD,
+	AUDIO_SOCKET_RECV_BUF_NOT_ENOUGH,
+	AUDIO_SOCKET_RECV_HEAD_FAIL,
+	AUDIO_SOCKET_RECV_DATA_FAIL,
+	AUDIO_SOCKET_SEND_HEAD_FAIL,
+	AUDIO_SOCKET_SEND_DATA_FAIL,
+};
+
+enum
+{
+	IMULTI_AUDIO_NO_ERROR = AUDIO_BINDER_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	IMULTI_AUDIO_GET_SERVER_MANAGER,
+	IMULTI_AUDIO_GET_SERVER_MULTIAUDIO,
+	IMULTI_AUDIO_GET_DATA_BUFFER,
+	IMULTI_AUDIO_GET_EXTRA_DATA_BUFFER,
+	IMULTI_AUDIO_CREATE,
+};
+
+enum
+{
+	PARAM_NO_ERROR = AUDIO_PARAM_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	PARAM_SET_FAIL,
+	PARAM_GET_FAIL,
+	PARAM_NO_BUFFER_GET,
+	PARAM_UNKNOWN_CMD,
+	PARAM_NO_ALLOWED_CMD,
+	PARAM_NO_ALLOWED_CHL,
+	PARAM_NO_ALLOWED_FMT,
+	PARAM_INVAIL,
+	PARAM_FIFO_BUSY,
+};
+
+enum
+{
+	MULTI_MEM_NO_ERROR = AUDIO_MEM_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+
+	SHARE_MEM_GET_FAIL,
+	SHARE_EXTRA_MEM_GET_FAIL,
+
+	SHARE_MEM_MALLOC_FAIL,
+	SHARE_MEM_FREE_FAIL,
+	SHARE_MEM_REALLOC_FAIL,
+	SHARE_MEM_FREE_ALL_FAIL,
+	SHARE_MEM_MAX_FREE_FAIL,
+	SHARE_MEM_MMAP_FAIL,
+	SHARE_MEM_SHARE_FAIL,
+
+	NORM_MEM_MALLOC_FAIL,
+	NORM_MEM_FREE_FAIL,
+	NORM_MEM_REALLOC_FAIL,
+
+	MEMORY_HEAP_BASE_INIT_FAIL,
+	MEMORY_BASE_INIT_FAIL,
+};
+
+enum
+{
+	SEMAPHORE_NO_ERROR = AUDIO_SEMAPHORE_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	SEMAPHORE_ERR_CREATE,
+	SEMAPHORE_ERR_MMAP,
+	SEMAPHORE_ERR_UNKNOWN_TYPE,
+};
+
+enum
+{
+	SERVER_NO_ERROR = AUDIO_SERVER_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	SERVER_ERR_SEMAPHORE,
+	SERVER_QUITING,
+	SERVER_QUITED,
+	SERVER_CREATE_SERVICE_TRACK,
+	SERVER_CREATE_SERVICE_RECORD,
+	SERVER_INIT_SERVICE_TRACK,
+	SERVER_INIT_SERVICE_RECORD,
+};
+
+enum
+{
+	THREAD_NO_ERROR = AUDIO_THREAD_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	THREAD_ERR_CREATE,
+	THREAD_ERR_ALREADY_RUNNING,
+	THREAD_ERR_WOULD_BLOCK,
+};
+
+enum
+{
+	DRIVER_NO_ERROR = AUDIO_DRIVER_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	DRIVER_INIT_CTRL,
+	DRIVER_INIT_SAMPLERATE,
+	DRIVER_INIT_OUTPUT,
+	DRIVER_INIT_INPUT,
+	DRIVER_UNINIT,
+	DRIVER_WRITE,
+	DRIVER_READ,
+	DRIVER_CONTROL
+};
+
+enum
+{
+	AUDIO_BAD_CALLED_SEQUENCE = AUDIO_STATE_ERROR, /**< @todo should be removed and instead by AUDIO_NO_ERROR*/
+	AUDIO_SERVER_BAD_STATE,
+	AUDIO_CLIENT_BAD_STATE,
+	AUDIO_OUT_RANG_MAX_SUPPORT,
+};
+
+#endif //AUDIO_ERROR_H
+

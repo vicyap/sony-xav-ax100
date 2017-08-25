@@ -1,0 +1,2 @@
+1. Run build.sh ,it will auto make ffmpeg.
+2. The lib is output in output/usr/local/lib.
